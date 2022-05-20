@@ -96,22 +96,9 @@ If ($conn18){
 
 
 $DB_NAME19='dormcomn_tokenizer';
-$conn19= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME18");
+$conn19= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME19");
 If ($conn19){
 }
 
-
-
-
-// server should keep session data for AT LEAST 1 hour
-ini_set('session.gc_maxlifetime', 3600);
-
-// each client should remember their session id for EXACTLY 1 hour
-session_set_cookie_params(3600);
-session_start();
-        $_SESSION['auth'] = true;
-        $_SESSION['start'] = time();
-        $_SESSION['expire'] = $_SESSION['start'] + (40 * 60);
-        
 
 ?>

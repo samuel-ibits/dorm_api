@@ -1,6 +1,9 @@
 <?php include 'connect.php';
 include 'tokenizer.php';
 
+generatetoken('user1002789710');
+
+
 if(validatetoken($_SESSION['dormtoken'])=="true"){
   
 
