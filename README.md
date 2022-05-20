@@ -12,3 +12,11 @@ use this url to clone the repo
 https://github.com/samuel-ibits/dorm_api.git
 sellect location of storage
 and clone...
+
+after clonning you want to open in vscode and make editons 
+  PLEASE NOTE
+  do not delete what you dont understand rather comment them 
+  feel free to creat new files , and express your self 
+  try explaining your steps with comment
+  
+  finally lets build the future
