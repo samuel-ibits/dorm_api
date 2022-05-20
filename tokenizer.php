@@ -30,7 +30,9 @@ if ($conn19->query($sqll) == TRUE) {
   echo '<script> alert("token generated sucessfully")</script>';
 
   return $token;
-} 
+} else{
+  echo $conn19->error;
+}
 
 }
 
