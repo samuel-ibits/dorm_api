@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/api.dorm.com.ng/
+    - /bin/cp -R images $DEPLOYPATH
+L
