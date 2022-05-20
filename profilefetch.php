@@ -46,45 +46,43 @@ $icherish=$row["icherish"];
 	
 response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$order_id,$amount,$response_code,$response_desc); 
 
+} 
 }else{
   close(200,"No Record Found");
      }
-}else{
-  close(400,"Invalid Request");
-      }
-  
-  
+     
+     
   
   mysqli_close($conn6);
   
-
-
-
-  function response($order_id,$amount,$response_code,$response_desc){
-    $response["name"];
-    $response["username"];
-    $response["phone"];
-    $response["sta"];
-    $response["mcred"];
-    $response["course"];
-    $response["school"];
-    $response["email"];
-    $response["descyour"];
-    $response["year"];
-    $response["pockid"];
-    $response["howsch"];
-    $response["descou"];
-    $response["dessch"];
-    $response["dob"];
-    $response["bescou"];
-    $response["besstudtm"];
-    $response["rescrush"];
-    $response["irep"];
-    $response["enjdoing"];
-    $response["favfood"];
-    $response["ihate"];
-    $response["icherish"];
+  function response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$order_id,$amount,$response_code,$response_desc){
+    $response["name"]= $name  ;
+    $response["username"]=$username ;
+    $response["phone"]=  $phone;
+    $response["sta"]= $sta ;
+    $response["mcred"]=  $mcred;
+    $response["course"]=  $course ;
+    $response["school"]= $school  ;
+    $response["email"]=  $email ;
+    $response["descyour"]= $descyour  ;
+    $response["year"]=  $year ;
+    $response["pockid"]=  $pocketid ;
+    $response["howsch"]= $howsch  ;
+    $response["descou"]= $descou ;
+    $response["dessch"]= $dessch ;
+    $response["dob"]= $dob  ;
+    $response["bescou"]= $bescou  ;
+    $response["besstudtm"]= $besstudtm ;
+    $response["rescrush"]= $rescrush  ;
+    $response["irep"]=  $irep  ;
+    $response["enjdoing"]= $enjdoing ;
+    $response["favfood"]= $favfood  ;
+    $response["ihate"]=  $ihate;
+    $response["icherish"]=$icherish   ;
      
+    
+
+
     $json_response = json_encode($response);
     echo $json_response;
   }
