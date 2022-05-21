@@ -88,7 +88,7 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
 
 
     $json_response = json_encode($response);
-    echo $json_response;
+    echo 'response'.$json_response;
   }
 
   function close($response_code,$response_desc){
@@ -97,7 +97,7 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
     $response['response_desc'] = $response_desc;
     
     $json_response = json_encode($response);
-    echo $json_response;
+    echo 'response'.$json_response;
   }
 
 }
