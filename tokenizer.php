@@ -22,7 +22,8 @@ session_start();
 function generatetoken($userid){
     $time= date("Y-m-d h:i:sa");
 
-$token=substr(md5(time()), 0, 20);
+//$token=substr(md5(time()), 0, 20);
+$token='ss';
 $sqllp = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$userid', '$time')";
 
 If ($conn19->query($sqllp) == TRUE) {
