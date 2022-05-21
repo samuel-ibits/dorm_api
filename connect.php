@@ -96,7 +96,7 @@ If ($conn18){
 
 
 $DB_NAME19='dormcomn_tokenizer';
-$conn19= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME19");
+$GLOBALS['conn19']= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME19");
 If ($conn19){
 }
 
