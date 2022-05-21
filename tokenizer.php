@@ -1,5 +1,4 @@
 <?php include 'connect.php';
-header("Content-Type:application/json");
 
 
 function validatetoken($token){
@@ -24,14 +23,14 @@ function generatetoken($userid){
     $time= date("Y-m-d h:i:sa");
 
 $token=substr(md5(time()), 0, 20);
-$sqll = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$userid', '$time')";
+$sqllp = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$userid', '$time')";
 
-if ($conn19->query($sqll) == TRUE) {
+If ($conn19->query($sqllp) == TRUE) {
   echo '<script> alert("token generated sucessfully")</script>';
 
   return $token;
 } else{
-  echo $conn19->error;
+  echo 'thiserror '.$conn19->error;
 }
 
 }
