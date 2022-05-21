@@ -26,6 +26,9 @@ function generatetoken($userid){
 $token='ss';
 $sqllp = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$userid', '$time')";
 
+
+
+
 If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
   echo '<script> alert("token generated sucessfully")</script>';
 
