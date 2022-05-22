@@ -31,6 +31,9 @@ $sqllp = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$user
 If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
   echo '<script> alert("token generated sucessfully")</script>';
 
+  session_start();
+ $_SESSION['dormtoken']=$token;
+
   return $token;
 } else{
   echo 'thiserror '.$GLOBALS['conn19']->error;
