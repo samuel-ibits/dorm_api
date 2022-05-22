@@ -53,13 +53,18 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
 } 
 }else{
   close(200,"No Record Found");
+  echo'donec';
+
      }
-     
+     echo'done';
      
   
   // mysqli_close($conn6);
   
   function response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
+    
+    echo'done';
+
     $response["name"]= $name  ;
     $response["username"]=$username ;
     $response["phone"]=  $phone;
@@ -95,7 +100,8 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
   }
 
   function close($response_code,$response_desc){
-    
+    echo'done';
+
     $response['response_code'] = $response_code;
     $response['response_desc'] = $response_desc;
     
