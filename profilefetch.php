@@ -52,13 +52,23 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
 
 } 
 }else{
-  closer(200,"No Record Found");
+  closer("200","No Record Found");
   echo'donec';
 
      }
      echo'done';
      
+
+     function closer($response_code,$response_desc){
+      echo'done';
   
+      $response['response_code'] = $response_code;
+      $response['response_desc'] = $response_desc;
+      
+      $json_response = json_encode($response);
+      echo 'response'.$json_response;
+    }
+    
   // mysqli_close($conn6);
   
   function response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
@@ -95,16 +105,6 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
     
 
 
-    $json_response = json_encode($response);
-    echo 'response'.$json_response;
-  }
-
-  function closer($response_code,$response_desc){
-    echo'done';
-
-    $response['response_code'] = $response_code;
-    $response['response_desc'] = $response_desc;
-    
     $json_response = json_encode($response);
     echo 'response'.$json_response;
   }
