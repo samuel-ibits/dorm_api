@@ -16,7 +16,7 @@ if(validatetoken($_SESSION['dormtoken'])== 1){
 
 
  
-$rselr="SELECT * FROM profile WHERE Id='".$userid."'";
+$rselr="SELECT * FROM profile WHERE Id='".$GLOBALS['$userid']."'";
 $result= $conn6->query($rselr);
   If ($result->num_rows>0){
 While ($row=$result->fetch_assoc()){
@@ -51,8 +51,7 @@ $icherish=$row["icherish"];
 response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc); 
 
 } 
-}else{
-  closer("200","No Record Found");
+}else{closer("200","No Record Found");
   echo'donec';
 
      }
