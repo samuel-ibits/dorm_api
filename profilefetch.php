@@ -53,19 +53,17 @@ if(validatetoken($_SESSION['dormtoken'])== 1){
 
 
   function closer($response_code,$response_desc){
-    echo'done';
 
     $response['response_code'] = $response_code;
     $response['response_desc'] = $response_desc;
     
     $json_response = json_encode($response);
-    echo 'response'.$json_response;
+    return $json_response; 
   }
 
 
 
 
-// header("Content-Type:application/json");
 
 
 
@@ -104,21 +102,20 @@ $favfood=$row["favfood"];
 $ihate=$row["ihate"];
 $icherish=$row["icherish"];
 	
-echo responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc);
+ responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc);
     
 } 
 }else{closer("200","No Record Found");
-  echo'donec';
+  
 
      }
 
      
-     echo'done';
-     
+   
 
      
     
-  // mysqli_close($conn6);
+   mysqli_close($conn6);
   
-}else echo'not correct'.validatetoken($_SESSION['dormtoken']);
+}
   ?>
