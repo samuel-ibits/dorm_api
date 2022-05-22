@@ -109,5 +109,5 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
     echo 'response'.$json_response;
   }
 
-}
+}else echo'not correct'.validatetoken($_SESSION['dormtoken']);
   ?>
