@@ -57,7 +57,7 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
      
      
   
-  mysqli_close($conn6);
+  // mysqli_close($conn6);
   
   function response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
     $response["name"]= $name  ;
