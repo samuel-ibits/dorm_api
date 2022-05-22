@@ -9,7 +9,7 @@ if(validatetoken($_SESSION['dormtoken'])=="true"){
   
 
 
-header("Content-Type:application/json");
+// header("Content-Type:application/json");
 
 
 
