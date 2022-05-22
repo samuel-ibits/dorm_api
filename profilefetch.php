@@ -59,7 +59,7 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
   
   mysqli_close($conn6);
   
-  function response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$order_id,$amount,$response_code,$response_desc){
+  function response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
     $response["name"]= $name  ;
     $response["username"]=$username ;
     $response["phone"]=  $phone;
@@ -83,6 +83,10 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
     $response["favfood"]= $favfood  ;
     $response["ihate"]=  $ihate;
     $response["icherish"]=$icherish   ;
+    $response["orderid"]="100"  ;
+    $response["orderid"]="200"  ;
+    $response["orderid"]="100"  ;
+
      
     
 
