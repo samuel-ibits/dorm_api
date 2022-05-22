@@ -48,7 +48,7 @@ $favfood=$row["favfood"];
 $ihate=$row["ihate"];
 $icherish=$row["icherish"];
 	
-
+echo $name;
 } 
 }else{closer("200","No Record Found");
   echo'donec';
