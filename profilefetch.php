@@ -52,7 +52,7 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
 
 } 
 }else{
-  close(200,"No Record Found");
+  closer(200,"No Record Found");
   echo'donec';
 
      }
@@ -99,7 +99,7 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
     echo 'response'.$json_response;
   }
 
-  function close($response_code,$response_desc){
+  function closer($response_code,$response_desc){
     echo'done';
 
     $response['response_code'] = $response_code;
