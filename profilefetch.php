@@ -48,7 +48,7 @@ $favfood=$row["favfood"];
 $ihate=$row["ihate"];
 $icherish=$row["icherish"];
 	
-response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$order_id,$amount,$response_code,$response_desc); 
+response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc); 
 
 } 
 }else{
@@ -83,10 +83,9 @@ response($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$ye
     $response["favfood"]= $favfood  ;
     $response["ihate"]=  $ihate;
     $response["icherish"]=$icherish   ;
-    $response["orderid"]="100"  ;
-    $response["orderid"]="200"  ;
-    $response["orderid"]="100"  ;
-
+    $response["response_code"]=$response_code  ;
+    $response["response_desc"]=$response_desc  ;
+    
      
     
 
