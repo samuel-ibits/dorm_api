@@ -9,9 +9,9 @@ While ($row=$result->fetch_assoc()){
     echo '<script> alert("token validated");</script>';
    $userid= $row["userid"];
 
-}    return true;
-
-}else{     return false;
+}    return 1;
+echo 1;
+}else{     return 0;
 }
 session_start();
  $_SESSION['dormtoken']=$token;

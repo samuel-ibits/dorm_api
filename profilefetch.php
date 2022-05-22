@@ -5,7 +5,7 @@ include 'tokenizer.php';
 generatetoken('user1002789710');
 
 
-if(validatetoken($_SESSION['dormtoken'])=="true"){
+if(validatetoken($_SESSION['dormtoken'])== 1){
   
 
 
