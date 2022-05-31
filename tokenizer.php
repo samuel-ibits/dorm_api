@@ -35,8 +35,6 @@ If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
  $_SESSION['dormtoken']=$token;
 
   return $token;
-} else{
-  echo 'thiserror '.$GLOBALS['conn19']->error;
 }
 
 }
