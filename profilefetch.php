@@ -1,13 +1,9 @@
 <?php include 'connect.php';
 include 'tokenizer.php';
 
-// sign in
-generatetoken('user1002789710');
-
-//close sigin
 
 
-if(validatetoken($_SESSION['dormtoken'])== 1){
+if(validatetoken($_COOKIE['dormtoken'])== 1){
 
   
 
