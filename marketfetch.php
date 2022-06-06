@@ -2,6 +2,10 @@
 include 'tokenizer.php';
 
 
+if(validatetoken($_COOKIE['dormtoken'])== 1){
+
+  
+
 
 $selr="SELECT * FROM products";
 $result= $conn20->query($selr);
@@ -14,13 +18,19 @@ While ($row=$result->fetch_assoc()){
     $images=$row["images"];
     $name=$row["name"];
     $description=$row["description"];
-    $comment_id=$row["comment_id"];
+    
+    $cartegories=$row["cartegories"];
+    $merchant=$row["merchant"];
+
     $links=$row["links"];
     
     
     $json_response = json_encode($row);
-    
+
     return $json_response; 
 }}else{
+}
+
+
 }
 ?>
