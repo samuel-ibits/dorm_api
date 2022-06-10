@@ -1,5 +1,18 @@
 <?php include 'connect.php';
 include 'tokenizer.php';
+header("Content-Type:application/json");
+
+
+function response($userid,$response_desc,$response_code,){
+	$response['order_id'] = $order_id;
+	$response['amount'] = $amount;
+	$response['response_code'] = $response_code;
+	$response['response_desc'] = $response_desc;
+	
+	$json_response = json_encode($response);
+	echo $json_response;
+}
+
 
 
 $u=$_GET['phone'];
@@ -50,20 +63,21 @@ If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
     $_SESSION['dormuserid']="$f";
 
-
-
+ }
+  $response_desc='login sucessfull';
+    $response_code=200;
+    response($userid,$response_desc,$response_code,);
 
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
    
 }
-}}
-
-if (generatetoken($userid)==""){
-return false;
 }else{
-  echo $userid;
-  return true; 
-};
+  $response_desc='login not sucessfull';
+    $response_code=500;
+    response($userid,$response_desc,$response_code,);
+
+}
+
 
 
 ?>
