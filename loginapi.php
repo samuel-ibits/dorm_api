@@ -63,18 +63,18 @@ If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
     $_SESSION['dormuserid']="$f";
 
- }
+ 
   $response_desc='login sucessfull';
     $response_code=200;
-    response($userid,$response_desc,$response_code,);
+    response($f,$response_desc,$response_code,);
 
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
-   
+}
 }
 }else{
   $response_desc='login not sucessfull';
     $response_code=500;
-    response($userid,$response_desc,$response_code,);
+    response('null',$response_desc,$response_code,);
 
 }
 
