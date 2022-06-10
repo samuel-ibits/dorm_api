@@ -3,9 +3,8 @@ include 'tokenizer.php';
 header("Content-Type:application/json");
 
 
-function response($userid,$response_desc,$response_code,){
-	$response['order_id'] = $order_id;
-	$response['amount'] = $amount;
+function response($userid,$response_desc,$response_code){
+	$response['userid'] = $userid;
 	$response['response_code'] = $response_code;
 	$response['response_desc'] = $response_desc;
 	
