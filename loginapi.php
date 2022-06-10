@@ -53,7 +53,7 @@ If($toid==$tokid or $toid==$tokid2){
 
 
 
-   Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
+   //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
    
 }
 }}
@@ -61,6 +61,7 @@ If($toid==$tokid or $toid==$tokid2){
 if (generatetoken($userid)==""){
 return false;
 }else{
+  echo $userid;
   return true; 
 };
 
