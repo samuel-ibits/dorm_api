@@ -2,9 +2,8 @@
 include 'tokenizer.php';
 
 
-$u=$_POST['phone'];
-$p=$_POST['pass'];
-
+$u=$_GET['phone'];
+$p=$_GET['pass'];
 
 
  
