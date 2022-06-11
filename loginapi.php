@@ -7,7 +7,6 @@ function response($userid,$response_desc,$response_code){
 	$response['userid'] = $userid;
 	$response['response_code'] = $response_code;
 	$response['response_desc'] = $response_desc;
-	
 	$json_response = json_encode($response);
 	echo $json_response;
 }
@@ -70,6 +69,7 @@ If($toid==$tokid or $toid==$tokid2){
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
 }
+
 }else{
   $response_desc='login not sucessfull';
     $response_code=500;
