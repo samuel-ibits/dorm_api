@@ -2,6 +2,14 @@
 include 'tokenizer.php';
 header("Content-Type:application/json");
 
+function failed($response_desc, $response_code){
+
+	$response['response_code'] = $response_code;
+	$response['response_desc'] = $response_desc;
+	$json_response = json_encode($response);
+	echo $json_response;
+
+}
 
 function response($blog_title,$blog_text,$blog_img,$blogger_name,$blog_post_date,$response_desc,$response_code)
 {
@@ -21,11 +29,6 @@ $response["blog_title"]=$blog_title;
 	$json_response = json_encode($response);
 	echo $json_response;
 }
-
-
-
-$u=$_GET['phone'];
-$p=$_GET['pass'];
 
 
  
@@ -52,12 +55,10 @@ $blog_post_date= $row["blog_post_date"];
 
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
-}
-
 }else{
-  $response_desc='login not sucessfull';
+  $response_desc='no data found';
     $response_code=500;
-    response('null',$response_desc,$response_code,);
+    failed($response_desc,$response_code);
 
 }
 
