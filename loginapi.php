@@ -64,7 +64,7 @@ If($toid==$tokid or $toid==$tokid2){
  
   $response_desc='login sucessfull';
     $response_code=200;
-    response($f,$response_desc,$response_code,);
+    response($f,$response_desc,$response_code);
 
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }

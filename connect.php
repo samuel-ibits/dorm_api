@@ -103,9 +103,14 @@ If ($conn19){
 
 
 $DB_NAME20='dormcomn_market';
-$GLOBALS['conn20']= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME19");
+$GLOBALS['conn20']= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME20");
 If ($conn20){
 }
 
 
+
+$DB_NAME21='dormcomn_blogs';
+$GLOBALS['conn21']= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME21");
+If ($conn21){
+}
 ?>
