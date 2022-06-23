@@ -92,12 +92,13 @@ async function getUser() {
 
 	// Parsing it to JSON format
 	const data = await response.json();
-	console.log(data.results);
-
+	console.log(data[0]);
+    console.log(data[2]);
+    console.log(data[3]);
 	// Retrieving data from JSON
-	const user = data.results[0];
+	// const user = data.results[0];
 
-	let title= user.blog_text;
+	let title= data.response_code;
 	
 
 	// Accessing the div container and modify/add
