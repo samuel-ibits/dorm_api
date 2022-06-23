@@ -11,10 +11,10 @@ function failed($response_desc, $response_code){
 
 }
 
-function response($blog_title,$blog_text,$blog_img,$blogger_name,$blog_post_date,$response_desc,$response_code)
+function response($blog_id,$blog_title,$blog_text,$blog_img,$blogger_name,$blog_post_date,$response_desc,$response_code)
 {
 	
-$response["blog_id"]=$blog_id;
+$response["blog_id"]= $blog_id;
 $response["blog_title"]=$blog_title;
  $response["blog_text"]=$blog_text;
  $response["blog_img"]=$blog_img;
