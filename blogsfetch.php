@@ -51,7 +51,7 @@ $blog_post_date= $row["blog_post_date"];
  
   $response_desc='post fetch sucessfull';
     $response_code=200;
-    response($blog_title,$blog_text,$blog_img,$blogger_name,$blog_post_date,$response_desc,$response_code);
+    response($blog_id,$blog_title,$blog_text,$blog_img,$blogger_name,$blog_post_date,$response_desc,$response_code);
 
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
