@@ -34,6 +34,10 @@ response($response_desc,$response_code);
 response($response_desc,$response_code);
 }
 
+}else{
+    $response_desc='post sending failed';
+    $response_code=400;
+response($response_desc,$response_code);
 }
 
 
