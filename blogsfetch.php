@@ -1,6 +1,7 @@
 <?php include 'connect.php';
-include 'tokenizer.php';
 header("Content-Type:application/json");
+
+include 'tokenizer.php';
 
 function failed($response_desc, $response_code){
 
