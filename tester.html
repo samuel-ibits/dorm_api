@@ -56,26 +56,26 @@
 	<a href="" id="phone"> </a>
 	</div>
 	<br />
-	<div id="user-img"></div>
+	<div id="user-img"><img src=""></div>
 	<br />
 
 	<div class="details">
 	<table>
 		<tr>
-		<td>Age</td>
-		<td><span id="age"></span></td>
+		<td>blog id</td>
+		<td><span id="id"></span></td>
 		</tr>
 		<tr>
-		<td>Gender</td>
-		<td><span id="gender"></span></td>
+		<td>blog title</td>
+		<td><span id="title"></span></td>
 		</tr>
 		<tr>
-		<td>Location</td>
-		<td><span id="location"></span></td>
+		<td>bloger text</td>
+		<td><span id="text"></span></td>
 		</tr>
 		<tr>
-		<td>Country</td>
-		<td><span id="country"></span></td>
+		<td>bloger date</td>
+		<td><span id="date"></span></td>
 		</tr>
 	</table>
 	</div>
@@ -99,15 +99,23 @@ async function getUser() {
 	// Retrieving data from JSON
 	
 
-	let title= data.blog_text;
+	let image= data.blog_img;
 	
+	let id= data.blog_id;
+	let title= data.blog_title;
+	let text= data.blog_text;
+	let date= data.blog_post_date;
 
 	// Accessing the div container and modify/add
 	// elements to the containers
-	document.getElementById("head").innerHTML = title;
 	
-	document.getElementById("email").innerHTML = title;
 	
+	document.getElementById("image").src = image;
+	
+	document.getElementById("id").innerHTML = id;
+	document.getElementById("title").innerHTML = title;
+	document.getElementById("text").innerHTML = text;
+	document.getElementById("date").innerHTML = date;
 	
 }
 
