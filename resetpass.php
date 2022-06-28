@@ -1,13 +1,16 @@
 <?php include 'connect.php';
+header("Content-Type:application/json");
 
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods: GET');
 session_start();
 
 $vercode=rand(1, 9).rand(1, 9).rand(1, 9).rand(1, 9);
 
 
-if(isset($_POST['getpass'])) {
-	$p=$_POST['phone'];
-$u=$_POST['uname'];
+
+	$p=$_GET['phone'];
+$u=$_GET['uname'];
 
 	$sel= "SELECT * FROM users WHERE phone like '%{$p}%' AND uname like '%{$u}%'";
 $result= $conn->query($sel);
@@ -36,24 +39,24 @@ if ($conn->query($sel) === TRUE) {}
  
 
    
-}
 
 
 
-if(isset($_POST['verify'])) {
-	$vercodee=$_SESSION['vercode'];
-	$myvercode=$_POST['vericode'];
-	if ($vercodee==$myvercode){
-		echo "corect";
-		$card1="none";
-$card2="none";
-$card3="block";
 
-	}else{ echo"incorrect";
+// if(isset($_POST['verify'])) {
+// 	$vercodee=$_SESSION['vercode'];
+// 	$myvercode=$_POST['vericode'];
+// 	if ($vercodee==$myvercode){
+// 		echo "corect";
+// 		$card1="none";
+// $card2="none";
+// $card3="block";
+
+// 	}else{ echo"incorrect";
 	
     
-    }
-}
+//     }
+// }
 
 if(isset($_POST['setpass'])) {
 	$oldpass=$_POST['oldpass'];
