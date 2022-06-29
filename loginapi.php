@@ -13,6 +13,23 @@ function response($userid,$response_desc,$response_code){
 
 
 
+
+function listener($f){
+	include 'connect.php';
+	$_SESSION['dormuserid']="$f";
+	
+		
+		   $date= date("Y-m-d h:i:sa");
+	 $iiin = "INSERT INTO login (id, userid, date, page) VALUES ( '', '$f', '$date', 'loging username')";
+	if ($conn17->query($iiin)==true) {
+		
+		header("Location:https://dorm.com.ng/v2/dm/html/studytools.php");
+	
+	}else{echo $conn17->error;}
+	}
+
+
+
 $u=$_GET['phone'];
 $p=$_GET['pass'];
 
@@ -65,7 +82,7 @@ If($toid==$tokid or $toid==$tokid2){
   $response_desc='login sucessfull';
     $response_code=200;
     response($f,$response_desc,$response_code);
-
+    listener($f);
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
 }
