@@ -1,14 +1,49 @@
 <?php include 'connect.php';
+
 header("Content-Type:application/json");
 
+// required headers
 header("Access-Control-Allow-Origin: *");
-header('Access-Control-Allow-Methods: GET');
-session_start();
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Max-Age: 3600");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+  
+   
 
-$vercode=rand(1, 9).rand(1, 9).rand(1, 9).rand(1, 9);
+function response($userid,$response_desc,$response_code){
+	$response['userid'] = $userid;
+	$response['response_code'] = $response_code;
+	$response['response_desc'] = $response_desc;
+	$json_response = json_encode($response);
+	echo $json_response;
+} 
+// get posted data
+$data = json_decode(file_get_contents("php://input"));
+  
+ // set product property values
+ 
+   
+ $email=$data->email;
+ $fname=$data->fname;
+ $lname=$data->lname;
+ $fulname=$fname." ". $lname;
+ $phone=$data->phone;
+   
+ $uname=$data->uname;
+ 
+  $pass=$data->pass;	
+ $pockid='pocket'.rand();
 
+ $userid='user'.rand();
 
-
+ $tokenid= 'a'.$phone.$pass;
+  $date= date("Y-m-d h:i:sa");
+ 
+ 
+ 
+    
+ 
 	$p=$_GET['phone'];
 $u=$_GET['uname'];
 
