@@ -48,8 +48,8 @@ $data = json_decode(file_get_contents("php://input"));
   
  if ($conn->query($ins)===TRUE) {
      $sqdd="INSERT INTO profile (Id, ppic, name, username, phone, sta, date, mcred, course, school, email, descyour, year, pocketid, howsch, descou, dessch, dob, bescou, besstudtm, rescrush, irep, enjdoing, favfood, ihate, icherish) VALUES ('$userid', 'media/', '$fulname', '$uname', '$phone', '1', '$date', '5', '', '', '$email', '' , '', '', '', '', '', '', '', '', '', '', '', '', '', '')";
-}
- if ($conn6->query($sqdd)===TRUE) {
+    }
+ if ($conn6->query($sqdd)==TRUE) {
  
  
 
@@ -73,7 +73,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 }else{
     $userid=$f;
-    $response_desc='New Account was not Created  Failed'.$conn6->error;
+    $response_desc='New Account was not Created  Failed';
     $response_code=400;
        // set response code - 400 bad request
     http_response_code(400);
