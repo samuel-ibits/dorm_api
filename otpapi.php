@@ -1,20 +1,50 @@
-<?php
+<?php include 'connect.php';
 
+header("Content-Type:application/json");
 
+// required headers
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: GET");
+header("Access-Control-Max-Age: 3600");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+  
+   
 
-function generate(){
-    $vercode=rand(1, 9).rand(1, 9).rand(1, 9).rand(1, 9);
+function response($vercode,$response_desc,$response_code){
+	$response['vercode'] = $vercode;
+	$response['response_code'] = $response_code;
+	$response['response_desc'] = $response_desc;
+	$json_response = json_encode($response);
+	echo $json_response;
+} 
+   
+ 
+   $p=$_GET['phone'];
+   $u=$_GET['uname'];
+   
+       $sel= "SELECT * FROM users WHERE phone like '%{$p}%' AND uname like '%{$u}%'";
+   $result= $conn->query($sel);
+   If ($result->num_rows>0){  
+   While ($row=$result->fetch_assoc()){
+   $userid= $row["userid"];
+   $id= $row["id"];
+   $phone= $row["phone"];
+   }
+     $_SESSION['vercode']=$vercode;
+      $_SESSION['userid']=$userid;
+       $_SESSION['idd']=$id;
+       $_SESSION['phonee']=$phone;
 
-session_start();
-$_SESSION['vercode']=$vercode;
-
-$topic='dorm';
-$message='DORM :'.$vercode;
-
-echo"<fieldset style="."'"."visibility:hidden;padding:0%;margin:0px;height:0px;width:0px;"."'".">"."<embed src ="."'"."https://netbulksms.com/index.php?"."option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=$topic&recipient=$phone&message=$message&
-"."'".">";
-Echo"</fieldset>";
-
-
-return $vercode;
+   $topic='dorm';
+   $message='DORM :'.$vercode;
+   texterapi($topic, $phone, $message);
+   }else{
+   $ale2 = "No match found, this account does not exist";
+   echo "<script type='text/javascript'>alert('$ale2'); </script>".$ale2;
+   }
+   if ($conn->query($sel) === TRUE) {
+    $response_desc="OTP sent successfully";
+    $response_code=200;
+ response($vercode,$response_desc,$response_code);
 }
