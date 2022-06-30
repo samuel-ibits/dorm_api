@@ -23,7 +23,6 @@ function listener($f){
 	 $iiin = "INSERT INTO login (id, userid, date, page) VALUES ( '', '$f', '$date', 'loging username')";
 	if ($conn17->query($iiin)==true) {
 		
-		header("Location:https://dorm.com.ng/v2/dm/html/studytools.php");
 	
 	}else{echo $conn17->error;}
 	}
