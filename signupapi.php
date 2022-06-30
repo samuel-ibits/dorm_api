@@ -73,7 +73,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 }else{
     $userid=$f;
-    $response_desc='New Account was not Created  Successfully';
+    $response_desc='New Account was not Created  Failed'.$conn6->error;
     $response_code=400;
        // set response code - 400 bad request
     http_response_code(400);
