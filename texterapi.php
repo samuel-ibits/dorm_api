@@ -9,7 +9,7 @@ if($topic==""){
 }
 
 
-if($phone!==""){
+if($phone==""){}else{
     texterapi($topic, $phone, $message); 
 }
 
