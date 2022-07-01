@@ -1,5 +1,5 @@
 <?php include 'connect.php';
-
+include ' texterapi';
 header("Content-Type:application/json");
 
 // required headers
