@@ -22,7 +22,7 @@ function response($vercode,$response_desc,$response_code){
  
    $p=$_GET['phone'];
    $u=$_GET['uname'];
-   
+   $vercode=rand(1, 9).rand(1, 9).rand(1, 9).rand(1, 9);
        $sel= "SELECT * FROM users WHERE phone like '%{$p}%' AND uname like '%{$u}%'";
    $result= $conn->query($sel);
    If ($result->num_rows>0){  
@@ -36,8 +36,8 @@ function response($vercode,$response_desc,$response_code){
        $_SESSION['idd']=$id;
        $_SESSION['phonee']=$phone;
 
-   $topic='dorm';
-   $message='DORM :'.$vercode;
+   $topic='Dorm OTP';
+   $message='do no share this code with anyone  :'.$vercode;
    texterapi($topic, $phone, $message);
    }else{
    $ale2 = "No match found, this account does not exist";
