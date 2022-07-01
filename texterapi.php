@@ -4,7 +4,12 @@ $phone=$_GET['phone'];
 $topic=$_GET['topic'];
 $message=$_GET['uname'];
 
-if(){
+if($topic==""){
+    $topic="dorm";
+}
+
+
+if($phone!==""){
     texterapi($topic, $phone, $message); 
 }
 
