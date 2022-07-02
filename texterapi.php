@@ -13,9 +13,9 @@ function response($vercode,$response_desc,$response_code){
    
 
 
-$phone=$_GET['phone'];
-$topic=$_GET['topic'];
-$message=$_GET['uname'];
+$phone=$_GET['sphone'];
+$topic=$_GET['stopic'];
+$message=$_GET['smessage'];
 
 if($topic==""){
     $topic="dorm";
