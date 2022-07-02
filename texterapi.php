@@ -30,7 +30,8 @@ if($topic==""){
 }
 
 
-if($phone==""){}else{
+if($phone==""){echo'emptty';}else{
+    echo'not emptty';
     texterapi($topic, $phone, $message); 
 }
 
