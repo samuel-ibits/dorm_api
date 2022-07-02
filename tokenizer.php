@@ -11,7 +11,7 @@ $result= $GLOBALS['conn19']->query($rselr);
 
   }   
   // returns  userid as response  if true
-  $response= $GLOBALS['$userid'];
+  $response= 1;
 
    }else{ 
      //returns 0 as response iif false
@@ -41,7 +41,6 @@ If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
 
  setcookie("dormtoken", $token, time() + (86400 * 30), "/");
 
- setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/");
 
   return $token;
 }

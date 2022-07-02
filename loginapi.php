@@ -76,8 +76,10 @@ $tokid='a'.$phone.$password;
 $tokid2='a'.$uname.$password;	
 If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
-    $_SESSION['dormuserid']="$f";
+   
+ setcookie("dormuserid", $f, time() + (86400 * 30), "/");
 
+ setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/");
  
   $response_desc='login sucessfull';
     $response_code=200;
