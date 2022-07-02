@@ -1,15 +1,7 @@
 <?php include 'connect.php';
 
-header("Content-Type:application/json");
 
-// required headers
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: GET");
-header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-  
-   
+
 
 function response($vercode,$response_desc,$response_code){
 	$response['vercode'] = $vercode;
@@ -34,16 +26,11 @@ if($phone==""){echo'emptty';}else{
     texterapi($topic, $phone, $message); 
 }
 
+
 function texterapi($topic, $phone, $message){
-    echo'api called';
-$url = "https://netbulksms.com/index.php?option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=dorm&recipient=08151519625&message=hello";
-// $url="https://netbulksms.com/components/com_spc/smsapi.php?username=dormcomn1&password=dormcomn1&sender=@@sender@@&recipient=@@08151519625@@&message=@@message@@&";
-$client = curl_init($url);
-	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
-	$response = curl_exec($client);
-	
-	$result = json_decode($response);
-	
-	   echo $result;
+Echo"<fieldset style="."'"."visibility:hidden;padding:0%;margin:0px;height:0px;width:0px;"."'".">"."<embed src ="."'"."https://netbulksms.com/index.php?"."option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=$topic&recipient=$phone&message=$message&
+    "."'".">";
+    Echo"</fieldset>";
+
 }
-	?>
+?>
