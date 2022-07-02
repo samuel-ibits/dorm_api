@@ -37,6 +37,8 @@ If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
 //if sucesssfull store in cookies and sessions
  
 
+
+
  setcookie("dormtoken", $token, time() + (86400 * 30), "/");
 
   return $token;
