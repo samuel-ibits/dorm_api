@@ -29,3 +29,5 @@ include 'texterapi.php';
    $response_desc="OTP Failed, No match found, this account does not exist";
     $response_code=500;
  response($vercode,$response_desc,$response_code);}
+
+ ?>
