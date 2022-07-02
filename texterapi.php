@@ -22,7 +22,7 @@ if($topic==""){
 }
 
 
-if($phone==""){echo'emptty';}else{
+if($phone==""){}else{
     texterapi($topic, $phone, $message); 
 }
 
