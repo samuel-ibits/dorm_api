@@ -36,8 +36,8 @@ if($phone==""){}else{
 
 function texterapi($topic, $phone, $message){
 
-// $url = "https://netbulksms.com/index.php?option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=".$topic."&recipient=".$phone."&message=".$message."";
-$url="https://netbulksms.com/components/com_spc/smsapi.php?username=dormcomn1&password=dormcomn1&sender=@@sender@@&recipient=@@08151519625@@&message=@@message@@&";
+$url = "https://netbulksms.com/index.php?option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=dorm&recipient=08151519625&message=hello";
+// $url="https://netbulksms.com/components/com_spc/smsapi.php?username=dormcomn1&password=dormcomn1&sender=@@sender@@&recipient=@@08151519625@@&message=@@message@@&";
 
  	
 	$client = curl_init($url);
