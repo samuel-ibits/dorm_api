@@ -45,9 +45,7 @@ function response($vercode,$response_desc,$response_code){
     "."'".">";
     Echo"</fieldset>";
     
-    $card1="none";
-    $card2="block";
-    $card3="none";
+    echo $phone;
     }else{
    $ale2 = "No match found, this account does not exist";
    echo "<script type='text/javascript'>alert('$ale2'); </script>".$ale2;
