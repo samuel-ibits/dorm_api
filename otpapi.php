@@ -2,15 +2,6 @@
 include 'texterapi.php';
 header("Content-Type:application/json");
    
-
-function response($vercode,$response_desc,$response_code){
-	$response['vercode'] = $vercode;
-	$response['response_code'] = $response_code;
-	$response['response_desc'] = $response_desc;
-	$json_response = json_encode($response);
-	echo $json_response;
-} 
-   
  
    $p=$_GET['phone'];
    $u=$_GET['uname'];
