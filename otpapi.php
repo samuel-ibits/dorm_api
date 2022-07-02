@@ -25,7 +25,7 @@ function response($vercode,$response_desc,$response_code){
    $vercode=rand(1, 9).rand(1, 9).rand(1, 9).rand(1, 9);
       $u="sammy";
       $p= "08151519625";
-   $sel= "SELECT * FROM users WHERE phone like '%{$p}%' AND uname like '%{$u}%'";
+   $sel= "SELECT * FROM users WHERE phone like '%".$p."%' AND uname like '%".$u."%'";
    $result= $conn->query($sel);
    If ($result->num_rows>0){  
    While ($row=$result->fetch_assoc()){
