@@ -20,7 +20,7 @@ include 'texterapi.php';
         $_SESSION['phonee']=$phone;
     $topic='Dorm';
     $message='Do not share this code with anyone. :'.$vercode;
-    
+    echo $phone;
     texterapi($topic, $phone, $message);
     $response_desc="OTP sent successfully";
     $response_code=200;
