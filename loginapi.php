@@ -1,8 +1,8 @@
 <?php include 'connect.php';
-include 'tokenizer.php';
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
 
+include 'tokenizer.php';
 
 function response($userid,$response_desc,$response_code){
 	$response['userid'] = $userid;
