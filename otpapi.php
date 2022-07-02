@@ -20,10 +20,12 @@ function response($vercode,$response_desc,$response_code){
 } 
    
  
-   $p=$_GET['phone'];
-   $u=$_GET['uname'];
+//    $p=$_GET['phone'];
+//    $u=$_GET['uname'];
    $vercode=rand(1, 9).rand(1, 9).rand(1, 9).rand(1, 9);
-       $sel= "SELECT * FROM users WHERE phone like '%{$p}%' AND uname like '%{$u}%'";
+      $u="sammy";
+      $p= "08151519625";
+   $sel= "SELECT * FROM users WHERE phone like '%{$p}%' AND uname like '%{$u}%'";
    $result= $conn->query($sel);
    If ($result->num_rows>0){  
    While ($row=$result->fetch_assoc()){
