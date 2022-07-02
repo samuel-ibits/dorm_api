@@ -41,19 +41,14 @@ function response($vercode,$response_desc,$response_code){
     $topic='dorm';
     $message='DORM :'.$vercode;
     
-    echo"<fieldset style="."'"."visibility:hidden;padding:0%;margin:0px;height:0px;width:0px;"."'".">"."<embed src ="."'"."https://netbulksms.com/index.php?"."option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=$topic&recipient=$phone&message=$message&
-    "."'".">";
-    Echo"</fieldset>";
-    
-    echo $phone;
-    }else{
-   $ale2 = "No match found, this account does not exist";
-   echo "<script type='text/javascript'>alert('$ale2'); </script>".$ale2;
-   }
-   if ($conn->query($sel) === TRUE) {
+    texterapi($topic, $phone, $message);
     $response_desc="OTP sent successfully";
     $response_code=200;
  response($vercode,$response_desc,$response_code);
-}else{ $response_desc="OTP Failed, account cannot be verified".$conn->error;
+    }else{
+   $ale2 = "No match found, this account does not exist";
+   echo "<script type='text/javascript'>alert('$ale2'); </script>".$ale2;
+   
+   $response_desc="OTP Failed, account cannot be verified".$conn->error;
     $response_code=500;
  response($vercode,$response_desc,$response_code);}
