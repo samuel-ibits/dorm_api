@@ -38,15 +38,12 @@ function response($vercode,$response_desc,$response_code){
         $_SESSION['phonee']=$phone;
     $topic='Dorm';
     $message='Do not share this code with anyone. :'.$vercode;
-    echo$phone;
+    
     texterapi($topic, $phone, $message);
     $response_desc="OTP sent successfully";
     $response_code=200;
  response($vercode,$response_desc,$response_code);
     }else{
-   $ale2 = "No match found, this account does not exist";
-   echo "<script type='text/javascript'>alert('$ale2'); </script>".$ale2;
-   
-   $response_desc="OTP Failed, account cannot be verified".$conn->error;
+   $response_desc="OTP Failed, No match found, this account does not exist";
     $response_code=500;
  response($vercode,$response_desc,$response_code);}
