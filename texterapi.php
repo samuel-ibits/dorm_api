@@ -64,6 +64,6 @@ curl_close($curl);
 
 
 $result=json_decode($resp);
-	   
+	   echo $result;
 }
 	?>
