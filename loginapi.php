@@ -83,6 +83,7 @@ If($toid==$tokid or $toid==$tokid2){
     $response_code=200;
     response($f,$response_desc,$response_code);
     listener($f);
+	generatetoken($userid);
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
 }
