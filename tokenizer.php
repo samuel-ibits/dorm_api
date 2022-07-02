@@ -32,7 +32,7 @@ $token=substr(md5(time()), 0, 20);
 $sqllp = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$userid', '$time')";
 
 If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
-  echo '<script> alert("token generated sucessfully")</script>';
+  //echo '<script> alert("token generated sucessfully")</script>';
 
 //if sucesssfull store in cookies and sessions
  
