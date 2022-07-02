@@ -1,7 +1,6 @@
 <?php include 'connect.php';
 include 'texterapi.php';
-header("Content-Type:application/json");
-   
+
  
    $p=$_GET['phone'];
    $u=$_GET['uname'];
