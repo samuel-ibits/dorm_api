@@ -31,12 +31,11 @@ if($topic==""){
 
 
 if($phone==""){echo'emptty';}else{
-    echo'not emptty';
     texterapi($topic, $phone, $message); 
 }
 
 function texterapi($topic, $phone, $message){
-
+    echo'api called';
 $url = "https://netbulksms.com/index.php?option=com_spc&comm=spc_api&username=dormcomn1&password=dormcomn1&sender=dorm&recipient=08151519625&message=hello";
 // $url="https://netbulksms.com/components/com_spc/smsapi.php?username=dormcomn1&password=dormcomn1&sender=@@sender@@&recipient=@@08151519625@@&message=@@message@@&";
 
