@@ -49,6 +49,6 @@ function response($vercode,$response_desc,$response_code){
     $response_desc="OTP sent successfully";
     $response_code=200;
  response($vercode,$response_desc,$response_code);
-}else{ $response_desc="OTP Failed, account cannot be verified";
+}else{ $response_desc="OTP Failed, account cannot be verified".$conn->error;
     $response_code=500;
  response($vercode,$response_desc,$response_code);}
