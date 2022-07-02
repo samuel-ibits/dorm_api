@@ -1,7 +1,7 @@
 <?php include 'connect.php';
 include 'tokenizer.php';
 
-
+echo validatetoken($_COOKIE['dormtoken']);
 
 if(validatetoken($_COOKIE['dormtoken'])== 1){
 
@@ -108,10 +108,5 @@ $icherish=$row["icherish"];
 
      
    
-
-     
-    
-   mysqli_close($conn6);
-  
 }
   ?>
