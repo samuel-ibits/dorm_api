@@ -35,8 +35,7 @@ If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
   echo '<script> alert("token generated sucessfully")</script>';
 
 //if sucesssfull store in cookies and sessions
-  session_start();
- $_SESSION['dormtoken']=$token;
+ 
 
  setcookie("dormtoken", $token, time() + (86400 * 30), "/");
 
