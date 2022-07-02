@@ -1,7 +1,7 @@
 <?php include 'connect.php';
 include 'tokenizer.php';
 
-echo validatetoken($_COOKIE['dormtoken']);
+echo 'ghvh'.validatetoken($_COOKIE['dormtoken']);
 
 if(validatetoken($_COOKIE['dormtoken'])== 1){
 
