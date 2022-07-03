@@ -43,10 +43,10 @@ If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
  setcookie("dormtoken", $token, time() + (86400 * 30), "/");
 
 
-  return $token;
+  
 }
 
-}
+}return $token;
 
 
 

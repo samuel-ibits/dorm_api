@@ -84,7 +84,9 @@ If($toid==$tokid or $toid==$tokid2){
     $response_code=200;
    
     listener($f);
-	generatetoken($f);
+	$token=generatetoken($f);
+	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
+ 
 	response($f, $response_desc, $response_code);
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
