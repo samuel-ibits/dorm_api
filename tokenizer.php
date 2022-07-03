@@ -8,10 +8,10 @@ $result= $GLOBALS['conn19']->query($rselr);
    While ($row=$result->fetch_assoc()){
     echo '<script> alert("token validated");</script>';
     $GLOBALS['$userid']= $row["userid"];
-
+    $response= 1;
   }   
   // returns  userid as response  if true
-  $response= 1;
+  
 
    }else{ 
      //returns 0 as response iif false
@@ -19,7 +19,7 @@ $result= $GLOBALS['conn19']->query($rselr);
         }
 
 //returns  response
-}return $response;
+return $response;}
 
 //generate token function
 function generatetoken($userid){
