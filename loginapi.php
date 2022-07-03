@@ -77,7 +77,6 @@ $tokid2='a'.$uname.$password;
 If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
    
- setcookie("dormuserid", $f, time() + (86400 * 30), "/");
 
  setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/");
  

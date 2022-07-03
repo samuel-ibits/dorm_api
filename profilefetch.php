@@ -1,13 +1,12 @@
 <?php include 'connect.php';
-header("Content-Type:application/json");
-header("Access-Control-Allow-Origin: *");
 
 include 'tokenizer.php';
 
 
 validatetoken($_COOKIE['dormtoken']);
-if(validatetoken($_COOKIE['dormtoken'])== 1){
+if(validatetoken($_COOKIE['dormtoken'])!== 0){
 
+$userid=validatetoken($_COOKIE['dormtoken']);
 
   
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
@@ -62,11 +61,6 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
 
 
-  $GLOBALS['$userid']=$userid;
-
-if($GLOBALS['$userid']=""){
-
-}
  
 $rselr="SELECT * FROM profile WHERE Id='".$userid."'";
 $result= $conn6->query($rselr);

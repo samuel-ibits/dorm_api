@@ -7,9 +7,9 @@ $result= $GLOBALS['conn19']->query($rselr);
   If ($result->num_rows>0){
    While ($row=$result->fetch_assoc()){
     
-    $GLOBALS['$userid']= $row["userid"];
+    $userid= $row["userid"];
     
-    $response= 1;
+    $response= $userid;
   }   
   // returns  userid as response  if true
   
