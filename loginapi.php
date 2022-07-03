@@ -86,7 +86,7 @@ If($toid==$tokid or $toid==$tokid2){
    
     listener($f);
 	generatetoken($f);
-	response($f,$response_desc,$response_code);
+	response($f, $response_desc, $response_code);
    //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
 }
