@@ -2,8 +2,8 @@
 
 include 'tokenizer.php';
 
-
-validatetoken($_COOKIE['dormtoken']);
+echo$_COOKIE['dormtoken'];
+echo validatetoken($_COOKIE['dormtoken']);
 if(validatetoken($_COOKIE['dormtoken'])!== 0){    
 
 $userid=validatetoken($_COOKIE['dormtoken']);
