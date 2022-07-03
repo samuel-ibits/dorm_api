@@ -8,9 +8,6 @@ include 'tokenizer.php';
 validatetoken($_COOKIE['dormtoken']);
 if(validatetoken($_COOKIE['dormtoken'])== 1){
 
-  echo validatetoken($_COOKIE['dormtoken']);
-
-
 
   
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
@@ -66,7 +63,6 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
 
 
- echo $GLOBALS['$userid'];
 
 if($GLOBALS['$userid']=""){
 
@@ -105,7 +101,7 @@ $ihate=$row["ihate"];
 $icherish=$row["icherish"];
 $response["response_code"]=200;
     $response["response_desc"]="fetch sucessfull";
-    	
+    	echo $phone;
  responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc);
     
 } 
