@@ -62,20 +62,20 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
 
 
-
+  $GLOBALS['$userid']=$userid;
 
 if($GLOBALS['$userid']=""){
 
 }
  
-$rselr="SELECT * FROM profile WHERE Id='".$GLOBALS['$userid']."'";
+$rselr="SELECT * FROM profile WHERE Id='".$userid."'";
 $result= $conn6->query($rselr);
   If ($result->num_rows>0){
 While ($row=$result->fetch_assoc()){
     
   $pic=$row["ppic"];
  if($pic=="" or $pic=="../../../media/profiles/" or $pic=="/media/profiles"  or $pic=="/media/ppic/pro.png"or $pic=="media/"){$ppic="media/ppic/pro.png";$ppid="images/image.jpg";
-  }else{ $ppic=$row["ppic"];$ppid=$row["ppic"];}
+}else{ $ppic=$row["ppic"];$ppid=$row["ppic"];}
 $name=$row["name"];
 $username=$row["username"];
 $phone=$row["phone"];
