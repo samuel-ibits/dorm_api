@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
 include 'tokenizer.php';
 
 
-
+validatetoken($_COOKIE['dormtoken']);
 if(validatetoken($_COOKIE['dormtoken'])== 1){
 
   
@@ -68,9 +68,9 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
 
 
-echo'vsd'. $GLOBALS['$userid'];
+if($GLOBALS['$userid']=""){
 
-
+}
  
 $rselr="SELECT * FROM profile WHERE Id='".$GLOBALS['$userid']."'";
 $result= $conn6->query($rselr);
