@@ -4,7 +4,7 @@ include 'tokenizer.php';
 
 
 validatetoken($_COOKIE['dormtoken']);
-if(validatetoken($_COOKIE['dormtoken'])!== 0){
+
 
 $userid=validatetoken($_COOKIE['dormtoken']);
 
@@ -106,5 +106,5 @@ $response["response_code"]=200;
 
      
    
-}else{echo'validation failed';}
+
   ?>
