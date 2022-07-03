@@ -2,8 +2,6 @@
 include 'tokenizer.php';
 
 
-echo $_COOKIE['dormtoken'];
-echo 'ghvh'.validatetoken($_COOKIE['dormtoken']);
 
 if(validatetoken($_COOKIE['dormtoken'])== 1){
 
@@ -46,9 +44,9 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
 
     $json_response = json_encode($response);
-print_r($response) ;
+
     $dataa=json_decode($json_response); 
-echo $dataa->name;
+return $dataa;
   }
 
 
