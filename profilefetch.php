@@ -68,7 +68,7 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
 
 
-
+echo $GLOBALS['$userid'];
 
 
  

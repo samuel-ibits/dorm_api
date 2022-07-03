@@ -8,6 +8,7 @@ $result= $GLOBALS['conn19']->query($rselr);
    While ($row=$result->fetch_assoc()){
     
     $GLOBALS['$userid']= $row["userid"];
+    
     $response= 1;
   }   
   // returns  userid as response  if true
