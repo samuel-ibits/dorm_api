@@ -56,7 +56,7 @@ return $dataa;
     $response['response_desc'] = $response_desc;
     
     $json_response = json_encode($response);
-    return $json_response; 
+    echo $json_response; 
   }
 
 
