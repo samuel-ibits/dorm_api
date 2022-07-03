@@ -6,7 +6,7 @@ $rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
 $result= $GLOBALS['conn19']->query($rselr);
   If ($result->num_rows>0){
    While ($row=$result->fetch_assoc()){
-    echo '<script> alert("token validated");</script>';
+    
     $GLOBALS['$userid']= $row["userid"];
     $response= 1;
   }   
