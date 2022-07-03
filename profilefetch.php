@@ -16,31 +16,31 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
     
 
-    $response["name"]= $name  ;
-    $response["username"]=$username ;
+    $response["name"]= $name;
+    $response["username"]=$username;
     $response["phone"]=  $phone;
-    $response["sta"]= $sta ;
+    $response["sta"]= $sta;
     $response["mcred"]=  $mcred;
-    $response["course"]=  $course ;
-    $response["school"]= $school  ;
-    $response["email"]=  $email ;
-    $response["descyour"]= $descyour  ;
-    $response["year"]=  $year ;
-    $response["pockid"]=  $pocketid ;
-    $response["howsch"]= $howsch  ;
-    $response["descou"]= $descou ;
-    $response["dessch"]= $dessch ;
+    $response["course"]=  $course;
+    $response["school"]= $school;
+    $response["email"]=  $email;
+    $response["descyour"]= $descyour;
+    $response["year"]=  $year;
+    $response["pockid"]=  $pocketid;
+    $response["howsch"]= $howsch;
+    $response["descou"]= $descou;
+    $response["dessch"]= $dessch;
     $response["dob"]= $dob  ;
     $response["bescou"]= $bescou  ;
-    $response["besstudtm"]= $besstudtm ;
-    $response["rescrush"]= $rescrush  ;
-    $response["irep"]=  $irep  ;
-    $response["enjdoing"]= $enjdoing ;
-    $response["favfood"]= $favfood  ;
+    $response["besstudtm"]= $besstudtm;
+    $response["rescrush"]= $rescrush;
+    $response["irep"]=  $irep;
+    $response["enjdoing"]= $enjdoing;
+    $response["favfood"]= $favfood;
     $response["ihate"]=  $ihate;
-    $response["icherish"]=$icherish   ;
-    $response["response_code"]=$response_code  ;
-    $response["response_desc"]=$response_desc  ;
+    $response["icherish"]=$icherish;
+    $response["response_code"]=$response_code;
+    $response["response_desc"]=$response_desc;
     
      
     
