@@ -1,4 +1,7 @@
 <?php include 'connect.php';
+header("Content-Type:application/json");
+header("Access-Control-Allow-Origin: *");
+
 include 'tokenizer.php';
 
 
