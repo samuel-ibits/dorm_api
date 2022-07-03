@@ -103,7 +103,7 @@ $enjdoing=$row["enjdoing"];
 $favfood=$row["favfood"];
 $ihate=$row["ihate"];
 $icherish=$row["icherish"];
-$response["response_code"]=200  ;
+$response["response_code"]=200;
     $response["response_desc"]="fetch sucessfull";
     	
  responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc);
