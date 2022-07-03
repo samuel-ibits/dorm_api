@@ -45,8 +45,9 @@ if(validatetoken($_COOKIE['dormtoken'])== 1){
 
     $json_response = json_encode($response);
 
-    $dataa=json_decode($json_response); 
-return $dataa;
+    //$dataa=json_decode($json_response); 
+    echo $json_response; 
+
   }
 
 
@@ -56,7 +57,7 @@ return $dataa;
     $response['response_desc'] = $response_desc;
     
     $json_response = json_encode($response);
-    echo $json_response; 
+    
   }
 
 
