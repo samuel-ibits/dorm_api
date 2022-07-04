@@ -1,31 +1,23 @@
 <?php include 'connect.php';
 
-$token=$_GET['token'];
-
-
-function validatetoken($token){ 
-  $rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
-  $result= $GLOBALS['conn19']->query($rselr);
-    If ($result->num_rows>0){
-     While ($row=$result->fetch_assoc()){
-      
-      $userid= $row["userid"];
-      
-      
-    }  } 
-    // returns  userid as response  if true
-    
-    $response= $userid;
-     echo $response;
-  //returns  response
-  return $response;
+if($_GET['token']=""){
+  $token=$_COOKIE['dormtoken'];
 }
-  
 
-if(validatetoken($_COOKIE['dormtoken'])!== 0){    
+$rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
+$result= $GLOBALS['conn19']->query($rselr);
+  If ($result->num_rows>0){
+   While ($row=$result->fetch_assoc()){
+    
+    $userid= $row["userid"];
+    
+    
+  }   
+        }
 
-$userid=validatetoken($_COOKIE['dormtoken']);
-echo $userid;
+
+
+
   
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
     
@@ -123,6 +115,5 @@ $response["response_code"]=200;
      }
 
      
-   
-}else{echo'validation failed';}
+
   ?>
