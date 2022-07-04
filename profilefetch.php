@@ -1,4 +1,5 @@
 <?php include 'connect.php';
+
 function validatetoken($token){ 
   $rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
   $result= $GLOBALS['conn19']->query($rselr);
@@ -18,7 +19,8 @@ function validatetoken($token){
           }
   
   //returns  response
-  return $response;}
+  return $response;
+}
   
 
 echo validatetoken($_COOKIE['dormtoken']);
