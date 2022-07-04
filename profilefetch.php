@@ -8,16 +8,12 @@ function validatetoken($token){
       
       $userid= $row["userid"];
       
-      $response= $userid;
-    }   
+      
+    }  } 
     // returns  userid as response  if true
     
-  
-     }else{ 
-       //returns 0 as response iif false
-       $response= 0;
-          }
-  
+    $response= $userid;
+     
   //returns  response
   return $response;
 }
