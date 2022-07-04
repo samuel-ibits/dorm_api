@@ -1,5 +1,8 @@
 <?php include 'connect.php';
 
+$token=$_GET['token'];
+
+
 function validatetoken($token){ 
   $rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
   $result= $GLOBALS['conn19']->query($rselr);
