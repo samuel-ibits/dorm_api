@@ -1,8 +1,26 @@
 <?php include 'connect.php';
+function validatetoken($token){ 
+  $rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
+  $result= $GLOBALS['conn19']->query($rselr);
+    If ($result->num_rows>0){
+     While ($row=$result->fetch_assoc()){
+      
+      $userid= $row["userid"];
+      
+      $response= $userid;
+    }   
+    // returns  userid as response  if true
+    
+  
+     }else{ 
+       //returns 0 as response iif false
+       $response= 0;
+          }
+  
+  //returns  response
+  return $response;}
+  
 
-include 'tokenizer.php';
-
-echo$_COOKIE['dormtoken'];
 echo validatetoken($_COOKIE['dormtoken']);
 if(validatetoken($_COOKIE['dormtoken'])!== 0){    
 
