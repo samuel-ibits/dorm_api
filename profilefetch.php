@@ -23,7 +23,6 @@ function validatetoken($token){
 }
   
 
-echo validatetoken($_COOKIE['dormtoken']);
 if(validatetoken($_COOKIE['dormtoken'])!== 0){    
 
 $userid=validatetoken($_COOKIE['dormtoken']);
@@ -76,7 +75,7 @@ $userid=validatetoken($_COOKIE['dormtoken']);
     $response['response_desc'] = $response_desc;
     
     $json_response = json_encode($response);
-    
+    echo  $json_response;
   }
 
 

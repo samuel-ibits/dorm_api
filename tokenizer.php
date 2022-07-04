@@ -22,6 +22,7 @@ function validatetoken($token){
   //returns  response
   return $response;}
   
+  
 //generate token function
 function generatetoken($userid){
     $time= date("Y-m-d h:i:sa");
