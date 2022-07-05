@@ -10,7 +10,6 @@ function response($userid,$response_desc,$response_code){
 	$response['response_code'] = $response_code;
 	$response['response_desc'] = $response_desc;
 	$json_response = json_encode($response);
-	echo $json_response;
 }
 //tracker
 function listener($f){
@@ -82,8 +81,9 @@ If($toid==$tokid or $toid==$tokid2){
    
     listener($f);
 	$token=generatetoken($f);
-	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
 	response($token, $response_desc, $response_code);
+	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
+
 }
 }
 
