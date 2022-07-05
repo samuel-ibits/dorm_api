@@ -103,7 +103,7 @@ If($toid==$tokid or $toid==$tokid2){
     listener($f);
 	$token=generatetoken($f);
 
-	response($token, $response_desc, $response_code);
+	response($f, $response_desc, $response_code);
 
 }
 }

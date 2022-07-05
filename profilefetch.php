@@ -2,7 +2,7 @@
 
 if($_GET['token']=""){
   $token=$_COOKIE['dormtoken'];
-}
+}else{ $token=$_GET['token'];}
 
 $rselr="SELECT * FROM tokenizer WHERE id='".$token."'";
 $result= $GLOBALS['conn19']->query($rselr);
