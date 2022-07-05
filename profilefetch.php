@@ -17,7 +17,7 @@ $result= $GLOBALS['conn19']->query($rselr);
 
 
 
-
+echo $userid;
   
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
     
