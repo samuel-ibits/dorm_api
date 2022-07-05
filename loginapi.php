@@ -3,7 +3,7 @@
 
 //response
 function response($userid,$response_desc,$response_code){
-	$response['userid'] = $userid;
+	$response['dormtoken'] = $userid;
 	$response['response_code'] = $response_code;
 	$response['response_desc'] = $response_desc;
 	$json_response = json_encode($response);
@@ -102,8 +102,9 @@ If($toid==$tokid or $toid==$tokid2){
     $response_code=200;
     listener($f);
 	$token=generatetoken($f);
+	setcookie("dormtoken", $token, time() + (86400 * 30));
 
-	response($f, $response_desc, $response_code);
+	response($token, $response_desc, $response_code);
 
 }
 }
