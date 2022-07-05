@@ -7,6 +7,7 @@ function response($userid,$response_desc,$response_code){
 	$response['response_code'] = $response_code;
 	$response['response_desc'] = $response_desc;
 	$json_response = json_encode($response);
+	print_r($json_response);
 }
 //tracker
 function listener($f){
