@@ -39,7 +39,7 @@ function listener($f){
 	
 	
 	
-	 setcookie("dormtoken", $token, time() + (86400 * 30), "/");
+	 setcookie("dormtoken", $token, time() + (86400 * 30));
 	
 	
 	  
@@ -96,7 +96,7 @@ $tokid2='a'.$uname.$password;
 If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
 
- setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/");
+ setcookie("dormpage", "studytools.php", time() + (86400 * 30));
  
   $response_desc='login successfull';
     $response_code=200;
