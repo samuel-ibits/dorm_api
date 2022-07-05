@@ -77,14 +77,14 @@ If($toid==$tokid or $toid==$tokid2){
 
  setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/");
  
-  $response_desc='login sucessfull';
+  $response_desc='login successfull';
     $response_code=200;
    
     listener($f);
 	$token=generatetoken($f);
 	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
  echo $token;
-	response($f, $response_desc, $response_code);
+	response($token, $response_desc, $response_code);
 }
 }
 
