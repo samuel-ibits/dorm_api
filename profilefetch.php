@@ -16,13 +16,13 @@ $result= $GLOBALS['conn19']->query($rselr);
     
     $userid= $row["userid"];
     
-    echo $userid;
+    echo 'ruid'.$userid;
   }   
         }
 
         echo 'fdd'.$token;
       
-echo $userid;
+echo 'uid'.$userid;
   
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
     
