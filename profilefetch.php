@@ -5,7 +5,7 @@ $tokenn=$_GET['token'];
 
 
 
-if($tokenn=""){
+if($tokenn==''){
   $token=$_COOKIE['dormtoken'];
 }else{ $token=$_GET['token'];}
 
