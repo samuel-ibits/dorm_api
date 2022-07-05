@@ -16,7 +16,7 @@ $result= $GLOBALS['conn19']->query($rselr);
     
     $userid= $row["id"];
     
-    
+    echo $userid;
   }   
         }
 
