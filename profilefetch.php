@@ -15,7 +15,7 @@ $result= $GLOBALS['conn19']->query($rselr);
   }   
         }
 
-        echo $token;
+        echo 'fdd'.$token;
 
 echo $userid;
   
