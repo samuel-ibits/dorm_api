@@ -83,7 +83,6 @@ If($toid==$tokid or $toid==$tokid2){
     listener($f);
 	$token=generatetoken($f);
 	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
- echo $token;
 	response($token, $response_desc, $response_code);
 }
 }
