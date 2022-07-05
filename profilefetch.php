@@ -14,7 +14,7 @@ $result= $GLOBALS['conn19']->query($rselr);
   If ($result->num_rows>0){
    While ($row=$result->fetch_assoc()){
     
-    $userid= $row["id"];
+    $userid= $row["userid"];
     
     echo $userid;
   }   
