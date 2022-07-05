@@ -1,6 +1,11 @@
 <?php include 'connect.php';
 
-if($_GET['token']=""){
+
+$tokenn=$_GET['token'];
+
+
+
+if($tokenn=""){
   $token=$_COOKIE['dormtoken'];
 }else{ $token=$_GET['token'];}
 
@@ -16,7 +21,7 @@ $result= $GLOBALS['conn19']->query($rselr);
         }
 
         echo 'fdd'.$token;
-
+        echo 'fgh'.$tokenn;
 echo $userid;
   
   function responses($name,$username,$phone,$sta,$mcred,$course,$school,$email,$descyour,$year,$pocketid,$howsch,$descou,$dessch,$dob,$bescou,$besstudtm,$rescrush,$irep,$enjdoing,$favfood,$ihate,$icherish,$response_code,$response_desc){
