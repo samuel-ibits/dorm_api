@@ -2,7 +2,6 @@
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
 
-include 'tokenizer.php';
 
 //response
 function response($userid,$response_desc,$response_code){
@@ -20,10 +19,35 @@ function listener($f){
 		   $date= date("Y-m-d h:i:sa");
 	 $iiin = "INSERT INTO login (id, userid, date, page) VALUES ( '', '$f', '$date', 'loging username')";
 	if ($conn17->query($iiin)==true) {
-		
-	
-	}else{echo $conn17->error;}
+		}else{echo $conn17->error;}
 	}
+
+	//generate token id
+	function generatetoken($userid){
+		$time= date("Y-m-d h:i:sa");
+	
+		//create the  random token with md5
+	$token=substr(md5(time()), 0, 20);
+	
+	// store in db for  future validation
+	$sqllp = "INSERT INTO tokenizer (id, userid, timestampp)VALUES ('$token', '$userid', '$time')";
+	
+	If ($GLOBALS['conn19']->query($sqllp) == TRUE) {
+	  //echo '<script> alert("token generated sucessfully")</script>';
+	
+	//if sucesssfull store in cookies and sessions
+	 
+	
+	
+	
+	 setcookie("dormtoken", $token, time() + (86400 * 30), "/");
+	
+	
+	  
+	}
+	
+	return $token;}
+	
 
 
 //get login details
@@ -72,17 +96,15 @@ $tokid2='a'.$uname.$password;
 
 If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
-   
 
  setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/");
  
   $response_desc='login successfull';
     $response_code=200;
-   
     listener($f);
 	$token=generatetoken($f);
+	
 	response($token, $response_desc, $response_code);
-	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
 
 }
 }
