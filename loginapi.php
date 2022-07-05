@@ -1,6 +1,4 @@
 <?php include 'connect.php';
-header("Content-Type:application/json");
-header("Access-Control-Allow-Origin: *");
 
 
 //response
@@ -103,7 +101,7 @@ If($toid==$tokid or $toid==$tokid2){
     $response_code=200;
     listener($f);
 	$token=generatetoken($f);
-	
+
 	response($token, $response_desc, $response_code);
 
 }
