@@ -4,6 +4,7 @@ header("Access-Control-Allow-Origin: *");
 
 include 'tokenizer.php';
 
+//response
 function response($userid,$response_desc,$response_code){
 	$response['userid'] = $userid;
 	$response['response_code'] = $response_code;
@@ -11,10 +12,7 @@ function response($userid,$response_desc,$response_code){
 	$json_response = json_encode($response);
 	echo $json_response;
 }
-
-
-
-
+//tracker
 function listener($f){
 	include 'connect.php';
 	$_SESSION['dormuserid']="$f";
@@ -29,19 +27,17 @@ function listener($f){
 	}
 
 
-
+//get login details
 $u=$_GET['phone'];
 $p=$_GET['pass'];
 
 
- 
-    
+ //validating
     	$selr="SELECT * FROM users WHERE phone like '%{$u}%'";
 $result= $conn->query($selr);
 If ($result->num_rows>0){  
 While ($row=$result->fetch_assoc()){
-	
-	
+		
 	$t= $row["phone"];
 
 	
@@ -58,15 +54,15 @@ While ($row=$result->fetch_assoc()){
 }}
     
 }
+//get the right combination of toid
 $toid='a'.$t.$p;
 
-
+//proper login in
 $sel= "SELECT * FROM users WHERE id='".$toid."'";
 $result= $conn->query($sel);
   If ($result->num_rows>0){
 While ($row=$result->fetch_assoc()){
 
-  
 
 $userid=$row["userid"];
 $phone= $row["phone"];
@@ -74,6 +70,7 @@ $uname= $row["uname"];
 $password= $row["password"];
 $tokid='a'.$phone.$password;
 $tokid2='a'.$uname.$password;	
+
 If($toid==$tokid or $toid==$tokid2){
     $f=$userid;
    
@@ -88,7 +85,6 @@ If($toid==$tokid or $toid==$tokid2){
 	setcookie("dormtoken", $token, time() + (86400 * 30), "/");
  echo $token;
 	response($f, $response_desc, $response_code);
-   //Echo '<script type="text/Javascript">window.location.href ="https://dorm.com.ng/v2/dm/html/studytools.php";</script>';
 }
 }
 
