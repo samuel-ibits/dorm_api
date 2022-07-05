@@ -15,8 +15,10 @@ $result= $GLOBALS['conn19']->query($rselr);
    While ($row=$result->fetch_assoc()){
     
     $userid= $row["userid"];
-    
+    $id= $row["id"];
     echo 'ruid'.$userid;
+    echo 'rid'.$userid;
+
   }   
         }
 
